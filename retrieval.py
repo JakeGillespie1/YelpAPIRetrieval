@@ -11,8 +11,8 @@ headers = {'Authorization':('Bearer '+ key), 'accept':'application/json'}
 
 #Resturaunt alias search using various locations (Enter Your Favorite Cities and How many resturaunts you want to see per city)
 #Here, there may be some cities (i.e. NYC that are finnicky because of the three letter name. Those bugs are being worked on (NYC is fixed))
-cities = ['Provo', 'Ogden']
-limit = 6
+cities = ['City1', 'City2']
+limit = 0
 
 #Setup lists
 business_aliases = []
@@ -96,7 +96,7 @@ for iCount in range(0, (len(cities)*limit)):
 df.set_index('business_alias', inplace=True)
 
 #Save df to a csv
-path = '/content/drive/MyDrive/Colab Notebooks/resources'
+path = 'Google/Drive/Path.csv'
 #mode a = append the data. headers false = dont add new headers as you append
 df.to_csv(f'{path}/Yelp.csv', mode='a', header=True)
 df
